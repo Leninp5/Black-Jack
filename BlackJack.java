@@ -72,7 +72,12 @@ public class BlackJack{
             System.out.println("The Dealer chooses to hit and now has a total of: " + dealer.handValue());
 
         }    
-        
+          if(dealer.handValue()< 15){
+            dealer.addCard(deck.drawCard());
+            System.out.println("The Dealer now has: ");
+            dealer.printCards();
+            System.out.println(" Which is now worth: " + dealer.handValue());
+        }
         
         if(player1.handValue()== 21){
             System.out.println("Black Jack!!!!!");
